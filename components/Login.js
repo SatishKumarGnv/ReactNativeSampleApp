@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Alert, Button, TextInput, View, StyleSheet } from 'react-native';
 
 import {Actions} from 'react-native-router-flux';
+import { Header } from 'react-navigation-stack';
+import Headers from './Header';
 
 // import Ajax from './assets/wrapper/ajax';
 export default class App extends Component {
@@ -75,6 +77,7 @@ fetch('http://uaims.apcrda.org/Login/ValidateUser', {
     return (
     
       <View style={styles.container}>
+      <Headers/>
         <TextInput
           value={this.state.username}
           onChangeText={(username) => this.setState({ username })}
